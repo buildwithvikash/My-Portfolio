@@ -6,6 +6,7 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import FloatingSocialBar from "./components/FloatingSocialBar";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
       <footer>
         <Footer />
       </footer>
+      <FloatingSocialBar />
     </div>
   );
 };
