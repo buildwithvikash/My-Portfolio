@@ -42,7 +42,7 @@ const Home = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white">
       {/* Hero Section */}
       <motion.div
         initial="hidden"
@@ -52,14 +52,14 @@ const Home = () => {
       >
         <div className="md:w-1/2 text-center md:text-left">
           <motion.h1
-            className="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-4"
+            className="text-4xl md:text-6xl font-bold text-gray-800 mb-4"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
           >
             Mechatronics Engineer
           </motion.h1>
           <motion.p
-            className="text-xl text-gray-600 dark:text-gray-300 mb-8"
+            className="text-xl text-gray-600 mb-8"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
@@ -96,7 +96,7 @@ const Home = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center"
+            className="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center shadow-lg"
           >
             <FaRobot className="text-8xl text-blue-600" />
           </motion.div>
@@ -110,7 +110,7 @@ const Home = () => {
         variants={skillVariants}
         className="container mx-auto px-4 py-16"
       >
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
           My Core Competencies
         </h2>
 
@@ -136,15 +136,15 @@ const Home = () => {
             <motion.div
               key={index}
               variants={skillItemVariants}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center"
+              className="bg-white p-6 rounded-lg shadow-md text-center hover:shadow-xl transition-shadow"
             >
               <div className="text-5xl text-blue-600 mb-4 flex justify-center">
                 {skill.icon}
               </div>
-              <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
+              <h3 className="text-xl font-semibold mb-2 text-gray-800">
                 {skill.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600">
                 {skill.description}
               </p>
             </motion.div>
@@ -153,24 +153,23 @@ const Home = () => {
       </motion.section>
 
       {/* Featured Projects Preview */}
-      <section className="container mx-auto px-4 py-16 bg-gray-100 dark:bg-gray-800">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
+      <section className="container mx-auto px-4 py-16 bg-gray-50">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
           Featured Projects
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Add project preview cards */}
           {[1, 2, 3].map((project, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
-              className="bg-white dark:bg-gray-700 rounded-lg overflow-hidden shadow-md"
+              className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="h-48 bg-gray-200 dark:bg-gray-600"></div>
+              <div className="h-48 bg-gray-200"></div>
               <div className="p-4">
-                <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">
+                <h3 className="text-xl font-semibold mb-2 text-gray-800">
                   Project {project}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-600">
                   Brief description of the project
                 </p>
               </div>

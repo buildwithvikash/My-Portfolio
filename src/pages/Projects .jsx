@@ -95,7 +95,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900 py-16 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 py-20 px-4">
       <div className="container mx-auto">
         {/* Page Header */}
         <motion.div
@@ -103,10 +103,10 @@ const Projects = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
             My Projects
           </h1>
-          <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-gray-600 max-w-2xl mx-auto">
             A showcase of innovative projects that demonstrate my skills in
             mechatronics, robotics, and software development.
           </p>
@@ -156,7 +156,7 @@ const Projects = () => {
               key={project.id}
               variants={projectVariants}
               whileHover={{ scale: 1.05 }}
-              className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg"
+              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow"
             >
               {/* Project Image */}
               <div className="relative">
@@ -191,12 +191,10 @@ const Projects = () => {
 
               {/* Project Details */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
+                <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  {project.description}
-                </p>
+                <p className="text-gray-600 mb-4">{project.description}</p>
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
@@ -230,7 +228,7 @@ const Projects = () => {
         {filteredProjects.length === 0 && (
           <div className="text-center py-12">
             <FaCode className="text-6xl text-gray-300 mx-auto mb-4" />
-            <p className="text-gray-600 dark:text-gray-300">
+            <p className="text-gray-600">
               No projects found matching your criteria.
             </p>
           </div>

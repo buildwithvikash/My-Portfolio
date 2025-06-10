@@ -21,11 +21,6 @@ const Footer = () => {
       color: "text-blue-600 hover:text-blue-800",
     },
     {
-      icon: <FaTwitter />,
-      href: "https://twitter.com/yourusername",
-      color: "text-blue-400 hover:text-blue-600",
-    },
-    {
       icon: <FaEnvelope />,
       href: "mailto:your.email@example.com",
       color: "text-red-500 hover:text-red-700",

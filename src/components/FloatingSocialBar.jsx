@@ -23,30 +23,6 @@ const FloatingSocialBar = () => {
       color: "bg-blue-600 text-white",
       hoverColor: "hover:bg-blue-700",
     },
-    {
-      icon: <FaTwitter />,
-      href: "https://twitter.com/yourusername",
-      color: "bg-sky-500 text-white",
-      hoverColor: "hover:bg-sky-600",
-    },
-    {
-      icon: <FaInstagram />,
-      href: "https://instagram.com/yourusername",
-      color: "bg-pink-500 text-white",
-      hoverColor: "hover:bg-pink-600",
-    },
-    {
-      icon: <FaDiscord />,
-      href: "https://discord.com/yourusername",
-      color: "bg-indigo-600 text-white",
-      hoverColor: "hover:bg-indigo-700",
-    },
-    {
-      icon: <FaCodepen />,
-      href: "https://codepen.io/yourusername",
-      color: "bg-gray-600 text-white",
-      hoverColor: "hover:bg-gray-700",
-    },
   ];
 
   return (
