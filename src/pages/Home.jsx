@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaRobot, FaCode, FaCogs, FaDownload } from "react-icons/fa";
+import { assets } from "../assets/assets";
 
 const Home = () => {
   // Hero section animation variants
@@ -98,7 +99,7 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="w-80 h-80 bg-blue-100 rounded-full flex items-center justify-center shadow-lg"
           >
-            <FaRobot className="text-8xl text-blue-600" />
+            <img src={assets.Profile} alt="Profile-img" className="object-cover rounded-full"/>
           </motion.div>
         </div>
       </motion.div>
@@ -144,9 +145,7 @@ const Home = () => {
               <h3 className="text-xl font-semibold mb-2 text-gray-800">
                 {skill.title}
               </h3>
-              <p className="text-gray-600">
-                {skill.description}
-              </p>
+              <p className="text-gray-600">{skill.description}</p>
             </motion.div>
           ))}
         </div>
