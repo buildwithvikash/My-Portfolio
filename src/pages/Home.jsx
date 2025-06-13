@@ -57,7 +57,7 @@ const Home = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
           >
-            Mechatronics Engineer
+            Mechanical Engineer
           </motion.h1>
           <motion.p
             className="text-xl text-gray-600 mb-8"
@@ -79,7 +79,7 @@ const Home = () => {
               whileTap={{ scale: 0.95 }}
             >
               <FaDownload className="mr-2" />
-              Download CV
+              Download Resume
             </motion.a>
             <motion.button
               className="flex items-center bg-gray-200 text-gray-800 px-6 py-3 rounded-full hover:bg-gray-300 transition"
@@ -119,8 +119,8 @@ const Home = () => {
           {[
             {
               icon: <FaRobot />,
-              title: "Robotics",
-              description: "Designing and developing advanced robotic systems",
+              title: "Web Development",
+              description: "Creating responsive and dynamic web application using modern technologies",
             },
             {
               icon: <FaCode />,
@@ -129,9 +129,9 @@ const Home = () => {
             },
             {
               icon: <FaCogs />,
-              title: "Mechanical Design",
+              title: "Perfprmance Optimization",
               description:
-                "Creating innovative mechanical engineering solutions",
+                "Delivering high-performance, scalable and efficient solution",
             },
           ].map((skill, index) => (
             <motion.div

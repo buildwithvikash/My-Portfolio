@@ -39,27 +39,9 @@ const Skills = () => {
       skills: [
         { name: "Python", icon: <FaPython />, color: "text-blue-500" },
         { name: "JavaScript", icon: <FaJs />, color: "text-yellow-500" },
-        { name: "C++", icon: <SiCplusplus />, color: "text-green-500" },
+        { name: "C#", icon: <SiCplusplus />, color: "text-green-500" },
         { name: "Java", icon: <FaJava />, color: "text-red-500" },
-        { name: "MATLAB", icon: <FaCalculator />, color: "text-purple-500" },
-      ],
-    },
-    {
-      name: "Robotics & Embedded Systems",
-      icon: <FaRobot />,
-      skills: [
-        { name: "ROS", icon: <FaRobot />, color: "text-blue-600" },
-        { name: "Arduino", icon: <SiArduino />, color: "text-green-600" },
-        {
-          name: "Raspberry Pi",
-          icon: <SiRaspberrypi />,
-          color: "text-red-600",
-        },
-        {
-          name: "Microcontroller Programming",
-          icon: <FaMicrochip />,
-          color: "text-purple-600",
-        },
+        { name: "HTML", icon: <FaCalculator />, color: "text-purple-500" },
       ],
     },
     {
@@ -69,7 +51,6 @@ const Skills = () => {
         { name: "React", icon: <FaReact />, color: "text-blue-500" },
         { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
         { name: "Express.js", icon: <SiExpress />, color: "text-gray-500" },
-        { name: "Django", icon: <SiDjango />, color: "text-green-700" },
       ],
     },
     {
@@ -79,7 +60,6 @@ const Skills = () => {
         { name: "Git", icon: <FaGit />, color: "text-orange-500" },
         { name: "Docker", icon: <FaDocker />, color: "text-blue-500" },
         { name: "Kubernetes", icon: <SiKubernetes />, color: "text-blue-600" },
-        { name: "Jenkins", icon: <SiJenkins />, color: "text-red-500" },
       ],
     },
     {
@@ -88,8 +68,7 @@ const Skills = () => {
       skills: [
         { name: "MongoDB", icon: <DiMongodb />, color: "text-green-500" },
         { name: "PostgreSQL", icon: <DiPostgresql />, color: "text-blue-600" },
-        { name: "AWS", icon: <FaAws />, color: "text-orange-500" },
-        { name: "Firebase", icon: <SiFirebase />, color: "text-yellow-500" },
+        { name: "MYSQL", icon: <FaAws />, color: "text-orange-500" },
       ],
     },
   ];

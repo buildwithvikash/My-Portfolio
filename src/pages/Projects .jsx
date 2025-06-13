@@ -38,9 +38,9 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "Gesture-Controlled Drone",
+      title: "Personal Task Manager",
       description:
-        "Drone controlled through hand gestures using computer vision.",
+        "A full-",
       image: "",
       categories: ["Robotics", "Machine Learning"],
       technologies: ["Python", "OpenCV", "Drone SDK"],
