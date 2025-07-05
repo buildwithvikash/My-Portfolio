@@ -6,6 +6,7 @@ import {
   FaMapMarkerAlt,
   FaCalendarAlt,
 } from "react-icons/fa";
+import { colgroup } from "framer-motion/client";
 
 const Experience = () => {
   // Experience and Education Data
@@ -30,9 +31,7 @@ const Experience = () => {
       company: "Wipro",
       location: "Greater Noida, UP",
       date: "Jan 2022 - Aug 2022",
-      description: [
-        "Salesforce Developer",
-      ],
+      description: ["Salesforce Developer"],
       technologies: ["Apex", "Lightning", "JAVA", "SSQL"],
     },
     {
@@ -41,9 +40,7 @@ const Experience = () => {
       institution: "GL Bajaj Institute of Technology and Management",
       location: "Greater Noida, UP",
       date: "Sep 2018 - May 2022",
-      description: [
-        "Minor in Computer Science",
-      ],
+      description: ["Minor in Computer Science"],
       technologies: ["CAD", "Python", "Embedded Systems"],
     },
     {
@@ -52,9 +49,7 @@ const Experience = () => {
       institution: "Raman Munjal Vidya Mandir",
       location: "Sidhrawali, Haryana",
       date: "April 2017 - June 2018",
-      description: [
-        "Passed with 66.7%",
-      ],
+      description: ["Passed with 66.7%"],
     },
     {
       type: "education",
@@ -62,9 +57,7 @@ const Experience = () => {
       institution: "Raman Munjal Vidya Mandir",
       location: "Sidhrawali, Haryana",
       date: "April 2015 - June 2016",
-      description: [
-        "Passed with 85%",
-      ],
+      description: ["Passed with 85%"],
     },
   ];
 
@@ -103,7 +96,6 @@ const Experience = () => {
     <div className="min-h-screen bg-gradient-to-br from-white to-blue-50 py-20 px-4">
       <div className="container mx-auto">
         {/* Page Header */}
-
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -120,7 +112,6 @@ const Experience = () => {
         </motion.div>
 
         {/* Filter Buttons */}
-
         <div className="flex justify-center mb-12 space-x-4">
           {["all", "work", "education"].map((filter) => (
             <button
@@ -143,127 +134,69 @@ const Experience = () => {
           ))}
         </div>
 
-        {/* Experience Timeline */}
-
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="relative before:content-[''] before:absolute before:top-0 before:left-1/2 before:transform before:-translate-x-1/2 before:w-0.5 before:h-full before:bg-gray-300"
+          className="relative before:content-[''] before:absolute before:top-0 before:left-6 md:left-10 before:w-0.5 before:h-full before:bg-gray-300 pl-10 md:pl-16"
         >
           {filteredExperience.map((item, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`
-
-                relative mb-8 w-full 
-
-                ${
-                  index % 2 === 0
-                    ? "md:pr-12 md:pl-0 pl-12"
-                    : "md:pl-12 md:pr-0 pr-12"
-                }
-
-              `}
+              className="relative mb-12"
             >
               {/* Timeline Marker */}
-
               <div
-                className={`
-
-                absolute top-0 ${
-                  index % 2 === 0
-                    ? "left-0 md:right-[-50px]"
-                    : "right-0 md:left-[-50px]"
-                }
-
-                w-10 h-10 rounded-full flex items-center justify-center
-
-                ${
-                  item.type === "work"
-                    ? "bg-blue-600 text-white"
-                    : "bg-green-600 text-white"
-                }
-
-              `}
+                className={`absolute left-0 top-2 w-10 h-10 rounded-full flex items-center justify-center ${
+                  item.type === "work" ? "bg-blue-600" : "bg-green-600"
+                } text-white shadow-md`}
               >
                 {item.type === "work" ? <FaBriefcase /> : <FaGraduationCap />}
               </div>
 
               {/* Experience Card */}
-
-              <div
-                className={`
-
-                bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow
-
-                ${
-                  index % 2 === 0
-                    ? "md:ml-12 md:text-left text-right"
-                    : "md:mr-12 md:text-right text-left"
-                }
-
-              `}
-              >
+              <div className="bg-white p-6 pl-16 rounded-lg shadow-md hover:shadow-xl transition-shadow">
                 <h3 className="text-xl font-semibold text-gray-800 mb-2">
                   {item.title}
                 </h3>
-
                 <p className="text-gray-600 mb-2">
                   {item.type === "work" ? item.company : item.institution}
                 </p>
 
-                {/* Location and Date */}
-
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
                   <div className="flex items-center">
                     <FaMapMarkerAlt className="mr-2" />
-
                     {item.location}
                   </div>
-
                   <div className="flex items-center">
                     <FaCalendarAlt className="mr-2" />
-
                     {item.date}
                   </div>
                 </div>
 
-                {/* Description */}
+                {item.description?.length > 0 && (
+                  <ul className="list-disc list-inside text-gray-700 mb-4">
+                    {item.description.map((desc, i) => (
+                      <li key={i} className="mb-2">
+                        {desc}
+                      </li>
+                    ))}
+                  </ul>
+                )}
 
-                <ul
-                  className={`
-
-                  list-disc list-inside text-gray-700 mb-4
-
-                  ${
-                    index % 2 === 0
-                      ? "md:text-left text-right"
-                      : "md:text-right text-left"
-                  }
-
-                `}
-                >
-                  {item.description.map((desc, descIndex) => (
-                    <li key={descIndex} className="mb-2">
-                      {desc}
-                    </li>
-                  ))}
-                </ul>
-
-                {/* Technologies */}
-
-                <div className="flex flex-wrap gap-2">
-                  {item.technologies.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                {item.technologies?.length > 0 && (
+                  <div className="flex flex-wrap gap-2">
+                    {item.technologies.map((tech, i) => (
+                      <span
+                        key={i}
+                        className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             </motion.div>
           ))}

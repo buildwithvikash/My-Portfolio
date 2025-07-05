@@ -3,8 +3,6 @@ import { motion } from "framer-motion";
 import {
   FaCode,
   FaLaptopCode,
-  FaRobot,
-  FaMicrochip,
   FaTools,
   FaDatabase,
   FaPython,
@@ -19,17 +17,8 @@ import {
 } from "react-icons/fa";
 
 import { DiMongodb, DiPostgresql } from "react-icons/di";
-
-import {
-  SiCplusplus,
-  SiArduino,
-  SiRaspberrypi,
-  SiExpress,
-  SiDjango,
-  SiKubernetes,
-  SiJenkins,
-  SiFirebase,
-} from "react-icons/si";
+import { TbBrandCSharp } from "react-icons/tb";
+import { SiExpress, SiKubernetes, SiHtml5 } from "react-icons/si";
 
 const Skills = () => {
   const skillCategories = [
@@ -39,9 +28,9 @@ const Skills = () => {
       skills: [
         { name: "Python", icon: <FaPython />, color: "text-blue-500" },
         { name: "JavaScript", icon: <FaJs />, color: "text-yellow-500" },
-        { name: "C#", icon: <SiCplusplus />, color: "text-green-500" },
+        { name: "C#", icon: <TbBrandCSharp />, color: "text-green-500" },
         { name: "Java", icon: <FaJava />, color: "text-red-500" },
-        { name: "HTML", icon: <FaCalculator />, color: "text-purple-500" },
+        { name: "HTML", icon: <SiHtml5 />, color: "text-orange-500" },
       ],
     },
     {
