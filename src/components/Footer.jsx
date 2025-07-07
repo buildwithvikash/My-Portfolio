@@ -12,17 +12,17 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaGithub />,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/buildwithvikash",
       color: "text-gray-800 hover:text-gray-600",
     },
     {
       icon: <FaLinkedin />,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/vikash-kumar-46888319b/",
       color: "text-blue-600 hover:text-blue-800",
     },
     {
       icon: <FaEnvelope />,
-      href: "mailto:your.email@example.com",
+      href: "mailto:vk117037@gmail.com",
       color: "text-red-500 hover:text-red-700",
     },
   ];

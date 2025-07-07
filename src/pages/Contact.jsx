@@ -83,20 +83,14 @@ const Contact = () => {
     {
       icon: <FaLinkedin />,
       name: "LinkedIn",
-      link: "https://linkedin.com/in/yourusername",
+      link: "https://www.linkedin.com/in/vikash-kumar-46888319b/",
       color: "text-blue-600 hover:text-blue-700",
     },
     {
       icon: <FaGithub />,
       name: "GitHub",
-      link: "https://github.com/yourusername",
+      link: "https://github.com/buildwithvikash",
       color: "text-gray-800 hover:text-gray-700",
-    },
-    {
-      icon: <FaTwitter />,
-      name: "Twitter",
-      link: "https://twitter.com/yourusername",
-      color: "text-sky-500 hover:text-sky-600",
     },
   ];
 

@@ -13,13 +13,13 @@ const FloatingSocialBar = () => {
   const socialLinks = [
     {
       icon: <FaGithub />,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/buildwithvikash",
       color: "bg-gray-800 text-white",
       hoverColor: "hover:bg-gray-700",
     },
     {
       icon: <FaLinkedin />,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/vikash-kumar-46888319b/",
       color: "bg-blue-600 text-white",
       hoverColor: "hover:bg-blue-700",
     },
