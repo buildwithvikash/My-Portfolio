@@ -102,8 +102,9 @@ const Skills = () => {
           </h1>
 
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A comprehensive overview of my technical skills across various
-            domains of mechatronics, software development, and engineering.
+            A detailed summary of my technical expertise spanning mechatronics,
+            software development, and engineering, with a focus on modern
+            technologies and full-stack development using the MERN stack.
           </p>
         </motion.div>
 
